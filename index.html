@@ -49,8 +49,13 @@
       justify-content: center;
     }
 
-    header h1 { font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 10px; }
+    header h1 { 
+      font-size: 2.5rem; 
+    }
+
+    header p { 
+      font-size: 1.2rem; margin-top: 10px; 
+    }
 
     nav {
       background-color: var(--primaria);
@@ -70,7 +75,7 @@
       transition: 0.5s;
       z-index: 1;
       overflow: hidden;
-}    
+    }    
     
     nav a::before {
       content: '';
@@ -84,7 +89,7 @@
       transform: scaleY(2);
       opacity: 0;
       transition: 0.3s;
-}    
+    }    
     
     nav a::after {
       content: '';
@@ -98,21 +103,21 @@
       opacity: 0;
       transition: 0.3s;
       z-index: -1;
-}    
+    }    
     
     nav a:hover {
       color: #fff;
-}    
+    }    
     
     nav a:hover::before {
       transform: scaleY(1);
       opacity: 1;
-}    
+    }    
     
     nav a:hover::after {
       transform: scaleY(1);
       opacity: 1;
-}    
+    }    
     
 
     section {
@@ -130,8 +135,14 @@
       text-align: center;
     }
 
-    .section-content { display: none; animation: fadeIn 0.6s ease forwards; }
-    .section-content.active { display: block; }
+    .section-content { 
+      display: none; 
+      animation: fadeIn 0.6s ease forwards; 
+    }
+
+    .section-content.active { 
+      display: block; 
+    }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -140,13 +151,15 @@
 
     /* PROPOSTAS */
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
       gap: 20px;
       margin-top: 30px;
     }
 
     .card {
+      width: 300px;
       background-color: white;
       padding: 25px;
       border-radius: 12px;
@@ -163,13 +176,19 @@
       transform: translateY(0);
     }
 
-    .card:hover { filter: none; }
-    .card h3 { color: var(--destaque); margin-bottom: 10px; }
+    .card:hover { 
+      filter: none; 
+    }
+    .card h3 { 
+      color: var(--destaque); 
+      margin-bottom: 10px; 
+    }
 
     /* EQUIPE */
     .membros {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* centraliza 1 ou 2 membros */
       gap: 20px;
       margin-top: 30px;
     }
@@ -183,14 +202,13 @@
       transition: opacity 0.6s ease, transform 0.6s ease;
       opacity: 0;
       transform: translateY(30px);
+      width: 300px;
     }
 
     .membro.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
-
 
     .membro img {
       width: 100px;
@@ -252,7 +270,9 @@
       transition: 0.3s;
     }
 
-    .close-btn:hover { color: var(--destaque); }
+    .close-btn:hover { 
+      color: var(--destaque); 
+    }
 
     .zoom-caption {
       color: white;
@@ -293,7 +313,9 @@
       transition: 0.3s;
     }
 
-    .sugestoes-box a:hover { background: var(--destaque); }
+    .sugestoes-box a:hover { 
+      background: var(--destaque);
+    }
 
     .social {
       display: flex;
@@ -308,7 +330,10 @@
       transition: transform 0.3s, color 0.3s;
     }
 
-    .social a:hover { transform: scale(1.2); color: var(--destaque); }
+    .social a:hover { 
+      transform: scale(1.2); 
+      color: var(--destaque); 
+    }
 
     footer {
       background-color: var(--primaria);
@@ -407,17 +432,19 @@
     </a>
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=FLAMA.MFL.2026@gmail.com" target="_blank">
       <i class="fa-solid fa-envelope"></i>
+    </a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 – FLAMA | Grêmio Estudantil</p>
+  <a style="color: white;" href="https://mail.google.com/mail/?view=cm&fs=1&to=FLAMA.MFL.2026@gmail.com" target="_blank">
+    <p>© 2026 – FLAMA | Grêmio Estudantil</p>
+  </a>
 </footer>
 
 <!-- Modal Zoom -->
 <div class="zoom-overlay" id="zoomOverlay">
   <i class="fa-solid fa-xmark close-btn" onclick="fecharZoom(event)"></i>
-
   <img id="zoomImage" src="" alt="">
   <div class="zoom-caption" id="zoomCaption"></div>
 </div>
