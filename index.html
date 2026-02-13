@@ -40,13 +40,35 @@
 
     header {
       min-height: 40vh;
-      background-color: black;
+      position: relative;
+      overflow: hidden;
       color: white;
       padding: 40px 20px;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background-image: url("familia.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: blur(7px);
+      z-index: 0;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
     }
 
     header h1 { 
@@ -194,7 +216,7 @@
     .membros {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* centraliza 1 ou 2 membros */
+      justify-content: center; 
       gap: 20px;
       margin-top: 30px;
     }
@@ -228,6 +250,27 @@
 
     .membro img:hover {
       transform: scale(1.05);
+    }
+
+    .familia {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .familia img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 12px; /* deixa levemente arredondada */
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
     }
 
     /* ZOOM MODAL */
@@ -370,8 +413,9 @@
 
 <body>
 <header>
+  
   <div>
-    <img src="flama.png" alt="Logo da Chapa" width="350px" style="justify-content: center;">
+    <img src="flama.png" alt="Logo da Chapa" width="300px" style="justify-content: center; background-color:#fff; border-radius: 100%; filter: none;">
   </div>
 </header>
 
@@ -405,21 +449,23 @@
 </section>
 
 <section id="equipe" class="section-content">
+  <h2 style="margin: 25px 0px 15px 0px;">Familia Flama</h2>
+  <div class="familia"><img src="familia.jpeg"></div>
   <h2>Nossa Equipe</h2>
   <div class="membros">
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Presidente</h4><p>Naila Cordeiro</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Vice-Presidente</h4><p>Sofia de Sousa</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Secretário</h4><p>Gustavo Juan</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Tesoureiro</h4><p>David Rubens</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Primeiro secretário</h4><p>Nikolas Raphael</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Primeira tesoureira</h4><p>Nadyne Ferreira</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenadora de cultura</h4><p>Milena Heloá</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenador de convivência escolar</h4><p>João Vitor</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenador esportivo</h4><p>Levi Gomes</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenadora de saúde e sustentabilidade</h4><p>Maisa Sabrina</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenadora de comunicação</h4><p>Fernanda Santos</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenadora artística</h4><p>Eloa Neves</p></div>
-    <div class="membro"><img src="https://via.placeholder.com/100"><h4>Coordenador de mídia</h4><p>João Pedro</p></div>
+    <div class="membro"><img src="naila.jpeg"><h4>Presidente</h4><p>Naila Cordeiro</p></div>
+    <div class="membro"><img src="sofia.jpeg"><h4>Vice-Presidente</h4><p>Sofia de Sousa</p></div>
+    <div class="membro"><img src="gustavo.jpeg"><h4>Secretário</h4><p>Gustavo Juan</p></div>
+    <div class="membro"><img src="david.jpeg"><h4>Tesoureiro</h4><p>David Rubens</p></div>
+    <div class="membro"><img src="nikolas.jpeg"><h4>Primeiro secretário</h4><p>Nikolas Raphael</p></div>
+    <div class="membro"><img src="nadyne.jpeg"><h4>Primeira tesoureira</h4><p>Nadyne Ferreira</p></div>
+    <div class="membro"><img src="milena.jpeg"><h4>Coordenadora de cultura</h4><p>Milena Heloá</p></div>
+    <div class="membro"><img src="joaov.jpeg"><h4>Coordenador de convivência escolar</h4><p>João Vitor</p></div>
+    <div class="membro"><img src="levi.jpeg"><h4>Coordenador esportivo</h4><p>Levi Gomes</p></div>
+    <div class="membro"><img src="maisa.jpeg"><h4>Coordenadora de saúde e sustentabilidade</h4><p>Maisa Sabrina</p></div>
+    <div class="membro"><img src="fernanda.jpeg"><h4>Coordenadora de comunicação</h4><p>Fernanda Santos</p></div>
+    <div class="membro"><img src="eloa.jpeg"><h4>Coordenadora artística</h4><p>Eloá Neves</p></div>
+    <div class="membro"><img src="joaop.jpeg"><h4>Coordenador de mídia</h4><p>João Pedro</p></div>
   </div>
 </section>
 
