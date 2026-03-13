@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FLAMA – Juntos pelo Futuro</title>
+  <link rel="icon" type="image/png" href="flama.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -184,6 +185,7 @@
       justify-content: center; 
       gap: 20px;
       margin-top: 30px;
+      margin-bottom: 20px;
     }
 
     .card {
@@ -217,16 +219,19 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center; 
-      gap: 20px;
+      gap: 40px;
       margin-top: 30px;
     }
 
     .membro {
       text-align: center;
-      transition: opacity 0.6s ease, transform 0.6s ease;
       opacity: 0;
       transform: translateY(30px);
-      width: 300px;
+      width: 260px;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
     }
 
     .membro.visible {
@@ -234,12 +239,18 @@
       transform: translateY(0);
     }
 
+    .membro:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
     .membro img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%; 
       object-fit: cover;
-      margin-bottom: 10px;
+      margin-top: 30px;
+      margin-bottom: 13px;
       cursor: pointer;
       transition: transform 0.3s ease;
       border: none;      
@@ -250,7 +261,20 @@
       transform: scale(1.05);
     }
 
-    .familia {
+    .membro h4 {
+      font-size: 19px;
+      color: var(--primaria);
+      margin-bottom: 2px;
+    }
+
+    .membro p {
+      font-size: 16px;
+      font-weight: bold;
+      color:#1f2933;
+      margin-bottom: 26px;
+    }
+
+    /*.familia {
       background-color: white;
       padding: 4px;
       border-radius: 12px;
@@ -271,7 +295,7 @@
       margin: 0 auto;
       border: none;
       box-shadow: none;
-    }
+    } */
 
     /* ZOOM MODAL */
     .zoom-overlay {
@@ -418,7 +442,7 @@
       padding: 20px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
       header img {
         width: 200px;
       }
@@ -476,33 +500,38 @@
     <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
     <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
     <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
+    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
+    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
   </div>
 </section>
 
 <section id="equipe" class="section-content">
-  <h2 style="margin: 25px 0px 15px 0px;">Família FLAMA</h2>
-  <div class="familia"><img src="familia.jpeg"></div>
+  <!--<h2 style="margin: 25px 0px 15px 0px;">Família FLAMA</h2>
+  <div class="familia"><img src="familia.jpeg"></div>-->
   <h2>Nossa Equipe</h2>
   <div class="membros">
-    <div class="membro"><img src="naila.jpeg"><h4>Presidente</h4><p>Naila Cordeiro</p></div>
-    <div class="membro"><img src="sofia.jpeg"><h4>Vice-Presidente</h4><p>Sofia de Sousa</p></div>
-    <div class="membro"><img src="gustavo.jpeg"><h4>Secretário</h4><p>Gustavo Juan</p></div>
-    <div class="membro"><img src="david.jpeg"><h4>Tesoureiro</h4><p>David Rubens</p></div>
-    <div class="membro"><img src="nikolas.jpeg"><h4>Primeiro secretário</h4><p>Nikolas Raphael</p></div>
-    <div class="membro"><img src="nadyne.jpeg"><h4>Primeira tesoureira</h4><p>Nadyne Ferreira</p></div>
-    <div class="membro"><img src="milena.jpeg"><h4>Coordenadora de cultura</h4><p>Milena Heloá</p></div>
-    <div class="membro"><img src="joaov.jpeg"><h4>Coordenador de convivência escolar</h4><p>João Vitor</p></div>
-    <div class="membro"><img src="levi.jpeg"><h4>Coordenador esportivo</h4><p>Levi Gomes</p></div>
-    <div class="membro"><img src="maisa.jpeg"><h4>Coordenadora de saúde e sustentabilidade</h4><p>Maisa Sabrina</p></div>
-    <div class="membro"><img src="fernanda.jpeg"><h4>Coordenadora de comunicação</h4><p>Fernanda Santos</p></div>
-    <div class="membro"><img src="eloa.jpeg"><h4>Coordenadora artística</h4><p>Eloá Neves</p></div>
-    <div class="membro"><img src="joaop.jpeg"><h4>Coordenador de mídia</h4><p>João Pedro</p></div>
+    <div class="membro"><img src="naila.jpeg"><h4>Presidente</h4> <p>Naila Peixoto</p></div>
+    <div class="membro"><img src="allanna.jpeg"><h4>Vice-Presidente</h4> <p>Allanna Beatriz</p></div>
+    <div class="membro"><img src="sofia.jpeg"><h4>Secretária</h4> <p>Sofia Diniz</p></div>
+    <div class="membro"><img src="nikolas.jpeg"><h4>Primeiro Secretário</h4> <p>Nikolas Raphael</p></div>
+    <div class="membro"><img src="david.jpeg"><h4>Tesoureiro</h4> <p>David Rubens</p></div>
+    <div class="membro"><img src="nadyne.jpeg"><h4>Primeira Tesoureira</h4> <p>Nadyne Ferreira</p></div>
+    <div class="membro"><img src="joaop.jpeg"><h4>Diretoria Social</h4> <p>João Pedro</p></div>
+    <div class="membro"><img src="gabriela.jpeg"><h4>Suplente de Diretoria Social</h4> <p>Gabriela Vasconcelos</p></div>
+    <div class="membro"><img src="pedro.jpeg"><h4>Diretoria de Imprensa<h4> <p>Pedro Henrique</p></div>
+    <div class="membro"><img src="joaov.jpeg"><h4>Suplente de Diretoria de Imprensa</h4> <p>João Vitor</p></div>
+    <div class="membro"><img src="levi.jpeg"><h4>Diretoria de Esportes</h4> <p>Levi Gomes</p></div>
+    <div class="membro"><img src="fernanda.jpeg"><h4>Suplente de Diretoria de Esportes<h4> <p>Fernanda Medeiros</p></div>
+    <div class="membro"><img src="milena.jpeg"><h4>Diretoria de Cultura</h4> <p>Milena Heloá</p></div>
+    <div class="membro"><img src="eloa.jpeg"><h4>Suplente de Diretoria de Cultura</h4> <p>Eloá Neves</p></div>
+    <div class="membro"><img src="maisa.jpeg"><h4>Diretoria de Saúde e Meio Ambiente</h4> <p>Maisa Sabrina</p></div>
+    <div class="membro"><img src="gustavo.jpeg"><h4>Suplente de Diretoria de Saúde e Meio Ambiente</h4> <p>Gustavo Juan</p></div>
   </div>
 </section>
 
 <section id="sugestoes" class="section-content">
   <h2>Sugestões</h2>
-  <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:30px;">
+  <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:35px;">
     Sua opinião é muito importante! Envie sua sugestão para melhorar o grêmio.
   </p>
 
@@ -559,19 +588,18 @@
   document.querySelectorAll('.card, .membro').forEach(el => observer.observe(el));
 
   // Zoom em fotos
-  
   const overlay = document.getElementById('zoomOverlay');
   const zoomImg = document.getElementById('zoomImage');
   const zoomCap = document.getElementById('zoomCaption');
 
-  const familiaImg = document.querySelector('.familia img');
+  /*const familiaImg = document.querySelector('.familia img');
   familiaImg.addEventListener('click', () => {
     zoomImg.src = familiaImg.src;
     zoomCap.textContent = "Família FLAMA";
     zoomImg.classList.add('familia');
     zoomImg.classList.remove('membro');
     overlay.classList.add('active');
-  });
+  });*/
 
   document.querySelectorAll('.membro img').forEach(img => {
     img.addEventListener('click', () => {
