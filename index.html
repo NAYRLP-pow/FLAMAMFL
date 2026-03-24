@@ -167,6 +167,52 @@
       display: block; 
     }
 
+    .info{
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .info-bloco{
+      background: white;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .info-bloco h2{
+      margin-bottom: 13px;
+    }
+
+    .info p {
+      text-align:center; 
+      max-width:800px; 
+      margin:auto;
+      margin-bottom: 15px;
+    }
+
+    .info-bloco a{
+      color: var(--destaque);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .info-bloco a:hover{
+      text-decoration: underline;
+    }
+
+    .info-bloco ul{
+      padding-left: 40px;
+    }
+
+    .info-bloco li{
+      margin-bottom: 8px;
+    }
+
+
     @keyframes fadeIn {
       from { 
         opacity: 0; 
@@ -195,10 +241,10 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      filter: blur(5px);
+      /*filter: blur(5px);
       transition: filter 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(30px);*/
     }
 
     .card.visible {
@@ -374,6 +420,16 @@
       animation: fadeCaption 0.5s ease forwards;
     }
 
+    .zoom-caption em{
+      display:block;
+      margin-top:8px;
+      font-style: italic;
+      max-width: 500px;
+      max-height: 600px;
+      margin-top: 5px;
+      opacity:0.9;
+    }
+
     @keyframes fadeCaption {
       from { 
         opacity: 0; 
@@ -483,11 +539,34 @@
 </nav>
 
 <section id="sobre" class="section-content active">
+  <div class="info">
+  <div class="info-bloco">
   <h2>Quem Somos</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">
+  <p>
     Nós da FLAMA (Frente Líder de Atuação e Movimento Acadêmico) temos como prioridade o bem-estar dos aluno em âmbito escolar! Somos uma chapa formada por estudantes comprometidos em melhorar a vida escolar,
     fortalecer a voz dos alunos e criar um ambiente mais inclusivo. 
   </p>
+  </div>
+
+  <div class="info-bloco">
+    <h2>O que é um Grêmio Estudantil?</h2>
+    <p>
+       Segundo a <a href="https://www.ubes.org.br/2022/gremio-estudantil-o-que-e-e-por-que-fazer-parte-de-um/" target="_blank"> UBES (União Brasileira dos Estudantes Secundaristas) </a> O Grêmio Estudantil é uma organização autônoma e democrática, formada por alunos, que representa a voz dos estudantes e defende seus interesses na escola. Sua principal função é promover a cidadania, melhorar o ambiente escolar, organizar atividades culturais, esportivas e sociais, além de mediar a comunicação entre os alunos e a gestão escolar.
+    </p>
+  </div>
+
+  <div class="info-bloco">
+    <h2>Funções dos Cargos</h2>
+    <ul>
+      <li><b style="color: var(--destaque);">Presidente:</b> representa o grêmio e coordena as atividades.</li>
+      <li><b style="color: var(--destaque);">Vice-presidente:</b> auxilia o presidente e assume suas funções quando necessário.</li>
+      <li><b style="color: var(--destaque);">Secretários:</b> organizam documentos e comunicação.</li>
+      <li><b style="color: var(--destaque);">Tesoureiros:</b> cuidam da administração financeira.</li>
+      <li><b style="color: var(--destaque);">Diretorias:</b> responsáveis por áreas como cultura, esportes, imprensa e ações sociais.</li>
+    </ul>
+  </div>
+
+  </div>
 </section>
 
 <section id="propostas" class="section-content">
@@ -496,12 +575,12 @@
      Em breve divulgaremos nossas propostas completas. Nos acompanhe pelas redes sociais!
   </p>
   <div class="cards">
-    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
-    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
-    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
-    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
-    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
-    <div class="card"><h3>Em breve!</h3><p>Acompanhe nossas redes sociais!</p></div>
+    <div class="card"><h3>Festival Folclórico</h3><p>Focado nos 1° e 2°, participação facultativa dos 3°.</p></div>
+    <div class="card"><h3>Clubes diversos</h3><p>Teatro, música, e dança (funcionamento nos intervalos).</p></div>
+    <div class="card"><h3>Oficinas mensais</h3><p>Como a de educação financeira, seria de escolha dos estudantes.</p></div>
+    <div class="card"><h3>Caixinha de sugestões</h3><p>Incentivo da participação estudantil na melhoria do ambiente escolar.</p></div>
+    <div class="card"><h3>Meio ambiente local</h3><p>Atividades entre alunos ao ar livre, como hortas e jardinagem</p></div>
+    <div class="card"><h3>Petições para reformas</h3><p>Reformas de acesso à escola e outras melhorias.</p></div>
   </div>
 </section>
 
@@ -510,22 +589,22 @@
   <div class="familia"><img src="familia.jpeg"></div>-->
   <h2>Nossa Equipe</h2>
   <div class="membros">
-    <div class="membro"><img src="naila.jpeg"><h4>Presidente</h4> <p>Naila Peixoto</p></div>
-    <div class="membro"><img src="allanna.jpeg"><h4>Vice-Presidente</h4> <p>Allanna Beatriz</p></div>
-    <div class="membro"><img src="sofia.jpeg"><h4>Secretária</h4> <p>Sofia Diniz</p></div>
-    <div class="membro"><img src="nikolas.jpeg"><h4>Primeiro Secretário</h4> <p>Nikolas Raphael</p></div>
-    <div class="membro"><img src="david.jpeg"><h4>Tesoureiro</h4> <p>David Rubens</p></div>
-    <div class="membro"><img src="nadyne.jpeg"><h4>Primeira Tesoureira</h4> <p>Nadyne Ferreira</p></div>
-    <div class="membro"><img src="joaop.jpeg"><h4>Diretoria Social</h4> <p>João Pedro</p></div>
-    <div class="membro"><img src="gabriela.jpeg"><h4>Suplente de Diretoria Social</h4> <p>Gabriela Vasconcelos</p></div>
-    <div class="membro"><img src="pedro.jpeg"><h4>Diretoria de Imprensa</h4> <p>Pedro Henrique</p></div>
-    <div class="membro"><img src="joaov.jpeg"><h4>Suplente de Diretoria de Imprensa</h4> <p>João Vitor</p></div>
-    <div class="membro"><img src="levi.jpeg"><h4>Diretoria de Esportes</h4> <p>Levi Gomes</p></div>
-    <div class="membro"><img src="fernanda.jpeg"><h4>Suplente de Diretoria de Esportes</h4> <p>Fernanda Medeiros</p></div>
-    <div class="membro"><img src="milena.jpeg"><h4>Diretoria de Cultura</h4> <p>Milena Heloá</p></div>
-    <div class="membro"><img src="eloa.jpeg"><h4>Suplente de Diretoria de Cultura</h4> <p>Eloá Neves</p></div>
-    <div class="membro"><img src="maisa.jpeg"><h4>Diretoria de Saúde e Meio Ambiente</h4> <p>Maisa Sabrina</p></div>
-    <div class="membro"><img src="gustavo.jpeg"><h4>Suplente de Diretoria de Saúde e Meio Ambiente</h4> <p>Gustavo Juan</p></div>
+    <div class="membro"><img src="naila.jpeg" data-texto="Como responsável pelo cargo de presidente, pretendo representar as vontades e necessidades dos estudantes dentro e fora do ambiente escolar, ser uma ponte para mudanças, auxiliar no cumprimento dos nossos deveres e ser voz na reivindicação de nossos direitos. Por uma escola mais participativa, justa e acolhedora para todos."><h4>Presidente</h4> <p>Naila Peixoto</p></div>
+    <div class="membro"><img src="allanna.jpeg" data-texto="Como responsável pelo cargo de vice-presidente, pretendo atuar como braço direito do presidente, comprometendo-me com a organização, representação e execução das pautas tratadas pela equipe. Além disso, junto ao presidente, buscarei auxiliar na coordenação geral da chapa e na representação do grêmio perante a comunidade escolar."><h4>Vice-Presidente</h4> <p>Allanna Beatriz</p></div>
+    <div class="membro"><img src="sofia.jpeg" data-texto="Como responsável pelo cargo de secretária do grêmio estudantil, pretendo organizar documentos, atas e ofícios, auxiliar na organização e promoção de eventos, além de atuar como braço direito da presidência, contribuindo para o bom funcionamento das atividades do grêmio."><h4>Secretária</h4> <p>Sofia Diniz</p></div>
+    <div class="membro"><img src="nikolas.jpeg" data-texto="Como responsável pelo cargo de primeiro secretário do grêmio estudantil, pretendo contribuir para um grêmio mais organizado, transparente e eficiente. Meu compromisso é registrar com atenção tudo o que for discutido e decidido, garantindo que as informações sejam claras e acessíveis para todos. Além disso, buscarei auxiliar na comunicação entre os membros do grêmio e colaborar para que as ideias e projetos sejam bem planejados e colocados em prática."><h4>Primeiro Secretário</h4> <p>Nikolas Raphael</p></div>
+    <div class="membro"><img src="david.jpeg" data-texto="Como responsável pelo cargo de tesoureiro geral do grêmio estudantil, pretendo administrar as finanças com responsabilidade, organização e transparência, mantendo um controle claro dos recursos. Além disso, buscarei participar do planejamento de eventos e projetos, auxiliar na organização dos recursos e propor ideias para arrecadação, sempre utilizando o dinheiro de forma consciente, dedicada e honesta, contribuindo para um grêmio mais organizado e eficiente."><h4>Tesoureiro</h4> <p>David Rubens</p></div>
+    <div class="membro"><img src="nadyne.jpeg" data-texto="Como responsável pelo cargo de tesoureira do grêmio estudantil, pretendo cuidar dos recursos com responsabilidade e transparência, sempre pensando no bem de todos. Além disso, buscarei investir em projetos e melhorias para a escola, ouvindo as ideias dos alunos e contribuindo para um grêmio mais organizado e ativo."><h4>Primeira Tesoureira</h4> <p>Nadyne Ferreira</p></div>
+    <div class="membro"><img src="joaop.jpeg" data-texto="Como responsável pelo cargo de diretor social, pretendo organizar eventos e atividades que promovam a integração dos alunos com a escola, buscando fortalecer a convivência e a participação estudantil. Além disso, trabalharei em conjunto com a equipe do grêmio, coordenando ações sociais e iniciativas que tornem o ambiente escolar mais acolhedor, participativo e dinâmico para todos."><h4>Diretoria Social</h4> <p>João Pedro</p></div>
+    <div class="membro"><img src="gabriela.jpeg" data-texto="Como responsável pelo cargo de suplente-diretora social, pretendo organizar eventos da escola, auxiliar na integração dos alunos com a escola, em conjunto com o diretor social, além de substituí-lo quando não puder estar presente"><h4>Suplente de Diretoria Social</h4> <p>Gabriela Vasconcelos</p></div>
+    <div class="membro"><img src="pedro.jpeg" data-texto="Como responsável pelo cargo de diretor de imprensa, pretendo divulgar nossos princípios, ideias e ações, levando nossos ideais a todos os estudantes por meio de postagens, campanhas e materiais informativos. Além disso, buscarei garantir que cada estudante saiba quem somos e o que defendemos, criando também espaços para que os alunos tenham voz dentro e fora da escola."><h4>Diretoria de Imprensa</h4> <p>Pedro Henrique</p></div>
+    <div class="membro"><img src="joaov.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de imprensa, pretendo atuar junto ao diretor de imprensa na comunicação da chapa com os estudantes. Buscarei auxiliar na produção e divulgação de conteúdos, como textos, artes e publicações nas redes sociais, apresentando de forma clara as propostas, ideias e ações do grupo. Além disso, pretendo contribuir no planejamento da comunicação da chapa e apoiar o diretor de imprensa nas demandas da área, garantindo que as informações cheguem aos alunos de maneira organizada e acessível."><h4>Suplente de Diretoria de Imprensa</h4> <p>João Vitor</p></div>
+    <div class="membro"><img src="levi.jpeg" data-texto="Como responsável pelo cargo de diretor de esportes, pretendo atuar na melhoria, no conforto e na valorização das modalidades esportivas da escola, contando com o apoio coletivo de análises e propostas dos alunos. Além disso, pretendo ouvir ideias por meio de sugestões e seleção de propostas, buscando colocar em prática projetos que fortaleçam o esporte e a participação dos estudantes na escola."><h4>Diretoria de Esportes</h4> <p>Levi Gomes</p></div>
+    <div class="membro"><img src="fernanda.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de esportes, pretendo auxiliar nas atividades e iniciativas esportivas da escola, contribuindo para manter os estudantes em movimento e incentivar a prática de exercícios de forma divertida. Além disso, buscarei explorar novas atividades e modalidades, para que cada aluno possa descobrir aquilo que mais lhe interessa. Também pretendo estar sempre disponível para colaborar com os estudantes e com a equipe do grêmio, ajudando a tornar a Escola Técnica Estadual Ministro Fernando Lyra um espaço mais agradável e participativo para todos."><h4>Suplente de Diretoria de Esportes</h4> <p>Fernanda Medeiros</p></div>
+    <div class="membro"><img src="milena.jpeg" data-texto="Como responsável pelo cargo de diretora de cultura, pretendo coordenar e planejar atividades culturais, como festivais, exposições, palestras e apresentações, contando com o apoio e a participação dos alunos. Além disso, buscarei criar oportunidades para que todos possam se envolver em atividades artísticas, como teatro, música, dança e literatura, fortalecendo assim a cultura e a integração na comunidade escolar."><h4>Diretoria de Cultura</h4> <p>Milena Heloá</p></div>
+    <div class="membro"><img src="eloa.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de cultura, pretendo incentivar a arte no ambiente escolar, especialmente por meio da dança, explorando diferentes estilos e promovendo a participação dos alunos. Além disso, buscarei contribuir para tornar a escola um espaço mais criativo, inclusivo e cheio de expressão."><h4>Suplente de Diretoria de Cultura</h4> <p>Eloá Neves</p></div>
+    <div class="membro"><img src="maisa.jpeg" data-texto="Como responsável pelo cargo de diretora de Saúde e Meio Ambiente, pretendo desenvolver projetos que deem visibilidade a problemas muitas vezes não percebidos, buscando soluções inovadoras e diversas. Além disso, trabalharei em ações que contribuam para a melhoria da saúde, do meio ambiente e do bem-estar no âmbito escolar."><h4>Diretoria de Saúde e Meio Ambiente</h4> <p>Maisa Sabrina</p></div>
+    <div class="membro"><img src="gustavo.jpeg" data-texto="Como responsável pelo cargo de suplente da diretoria de Saúde e Meio Ambiente, pretendo atuar em conjunto na construção de projetos que deem visibilidade a problemas muitas vezes negligenciados. Além disso, buscarei apoiar a implementação de soluções inovadoras e diversificadas, contribuindo para que as ações promovam a saúde, a preservação ambiental e o bem-estar de todos no ambiente escolar."><h4>Suplente de Diretoria de Saúde e Meio Ambiente</h4> <p>Gustavo Juan</p></div>
   </div>
 </section>
 
@@ -606,7 +685,8 @@
       zoomImg.src = img.src;
       const h4 = img.parentElement.querySelector('h4').textContent;
       const p = img.parentElement.querySelector('p').textContent;
-      zoomCap.textContent = `${h4} – ${p}`;
+      const texto = img.dataset.texto || "";
+      zoomCap.innerHTML = `<strong>${h4} – ${p}</strong><br><em>"${texto}"</em>`;
       zoomImg.classList.add('membro');
       zoomImg.classList.remove('familia');
       overlay.classList.add('active');
