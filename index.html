@@ -320,7 +320,7 @@
       margin-bottom: 26px;
     }
 
-    /*.familia {
+    .familia {
       background-color: white;
       padding: 4px;
       border-radius: 12px;
@@ -328,7 +328,7 @@
       text-align: center;
       width: 100%;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
     }
 
     .familia img {
@@ -341,7 +341,7 @@
       margin: 0 auto;
       border: none;
       box-shadow: none;
-    } */
+    }
 
     /* ZOOM MODAL */
     .zoom-overlay {
@@ -384,10 +384,11 @@
 
     #zoomImage.familia {
       width: 90%;
-      height: 40%;
-      border: 2px solid white; 
+      max-width: 600px;
+      height: auto;
+      border: 2px solid white;
       border-radius: 12px;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     @keyframes zoomIn {
@@ -581,8 +582,8 @@
 </section>
 
 <section id="equipe" class="section-content">
-  <!--<h2 style="margin: 25px 0px 15px 0px;">Família FLAMA</h2>
-  <div class="familia"><img src="familia.jpeg"></div>-->
+  <h2 style="margin: 25px 0px 15px 0px;">Família FLAMA</h2>
+  <div class="familia"><img src="familia.jpeg"></div>
   <h2>Nossa Equipe</h2>
   <div class="membros">
     <div class="membro"><img src="naila.jpeg" data-texto="Como responsável pelo cargo de presidente, pretendo representar as vontades e necessidades dos estudantes dentro e fora do ambiente escolar, ser uma ponte para mudanças, auxiliar no cumprimento dos nossos deveres e ser voz na reivindicação de nossos direitos. Por uma escola mais participativa, justa e acolhedora para todos."><h4>Presidente</h4> <p>Naila Peixoto</p></div>
@@ -667,14 +668,14 @@
   const zoomImg = document.getElementById('zoomImage');
   const zoomCap = document.getElementById('zoomCaption');
 
-  /*const familiaImg = document.querySelector('.familia img');
+  const familiaImg = document.querySelector('.familia img');
   familiaImg.addEventListener('click', () => {
     zoomImg.src = familiaImg.src;
     zoomCap.textContent = "Família FLAMA";
     zoomImg.classList.add('familia');
     zoomImg.classList.remove('membro');
     overlay.classList.add('active');
-  });*/
+  });
 
   document.querySelectorAll('.membro img').forEach(img => {
     img.addEventListener('click', () => {
