@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FLAMA – Juntos pelo Futuro</title>
   <link rel="icon" type="image/png" href="flama.png">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -72,13 +71,8 @@
       z-index: 1;
     }
 
-    header h1 { 
-      font-size: 2.5rem; 
-    }
-
-    header p { 
-      font-size: 1.2rem; margin-top: 10px; 
-    }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin-top: 10px; }
 
     nav {
       background-color: var(--primaria);
@@ -103,10 +97,8 @@
     nav a::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       border-top: 2px solid var(--secundaria);
       border-bottom: 2px solid var(--secundaria);
       transform: scaleY(2);
@@ -117,10 +109,8 @@
     nav a::after {
       content: '';
       position: absolute;
-      top: 2px;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 2px; left: 0;
+      width: 100%; height: 100%;
       background-color: var(--secundaria);
       transform: scale(0);
       opacity: 0;
@@ -128,20 +118,9 @@
       z-index: -1;
     }    
     
-    nav a:hover {
-      color: #fff;
-    }    
-    
-    nav a:hover::before {
-      transform: scaleY(1);
-      opacity: 1;
-    }    
-    
-    nav a:hover::after {
-      transform: scaleY(1);
-      opacity: 1;
-    }    
-    
+    nav a:hover { color: #fff; }
+    nav a:hover::before { transform: scaleY(1); opacity: 1; }
+    nav a:hover::after { transform: scaleY(1); opacity: 1; }
 
     section {
       padding: 40px 20px;
@@ -158,16 +137,10 @@
       text-align: center;
     }
 
-    .section-content { 
-      display: none; 
-      animation: fadeIn 0.6s ease forwards; 
-    }
+    .section-content { display: none; animation: fadeIn 0.6s ease forwards; }
+    .section-content.active { display: block; }
 
-    .section-content.active { 
-      display: block; 
-    }
-
-    .info{
+    .info {
       max-width: 900px;
       margin: 40px auto 0 auto;
       display: flex;
@@ -175,7 +148,7 @@
       gap: 25px;
     }
 
-    .info-bloco{
+    .info-bloco {
       background: white;
       padding: 20px;
       margin-bottom: 25px;
@@ -183,45 +156,16 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .info-bloco h2{
-      margin-bottom: 13px;
-    }
-
-    .info p {
-      text-align:center; 
-      max-width:800px; 
-      margin:auto;
-      margin-bottom: 15px;
-    }
-
-    .info-bloco a{
-      color: var(--destaque);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .info-bloco a:hover{
-      text-decoration: underline;
-    }
-
-    .info-bloco ul{
-      padding-left: 40px;
-    }
-
-    .info-bloco li{
-      margin-bottom: 8px;
-    }
-
+    .info-bloco h2 { margin-bottom: 13px; }
+    .info p { text-align:center; max-width:800px; margin:auto; margin-bottom: 15px; }
+    .info-bloco a { color: var(--destaque); font-weight: bold; text-decoration: none; }
+    .info-bloco a:hover { text-decoration: underline; }
+    .info-bloco ul { padding-left: 40px; }
+    .info-bloco li { margin-bottom: 8px; }
 
     @keyframes fadeIn {
-      from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-      }
-      to { 
-        opacity: 1; 
-        transform: translateY(0); 
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* PROPOSTAS */
@@ -241,24 +185,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      /*filter: blur(5px);
-      transition: filter 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
-      opacity: 0;
-      transform: translateY(30px);*/
     }
 
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card:hover { 
-      filter: none; 
-    }
-    .card h3 { 
-      color: var(--destaque); 
-      margin-bottom: 10px; 
-    }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    .card:hover { filter: none; }
+    .card h3 { color: var(--destaque); margin-bottom: 10px; }
 
     /* EQUIPE */
     .membros {
@@ -280,45 +211,21 @@
       transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
     }
 
-    .membro.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .membro:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
+    .membro.visible { opacity: 1; transform: translateY(0); }
+    .membro:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
 
     .membro img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%; 
-      object-fit: cover;
-      margin-top: 30px;
-      margin-bottom: 13px;
+      width: 120px; height: 120px;
+      border-radius: 50%; object-fit: cover;
+      margin-top: 30px; margin-bottom: 13px;
       cursor: pointer;
       transition: transform 0.3s ease;
-      border: none;      
-      box-shadow: none;  
+      border: none; box-shadow: none;
     }
 
-    .membro img:hover {
-      transform: scale(1.05);
-    }
-
-    .membro h4 {
-      font-size: 19px;
-      color: var(--primaria);
-      margin-bottom: 2px;
-    }
-
-    .membro p {
-      font-size: 16px;
-      font-weight: bold;
-      color:#1f2933;
-      margin-bottom: 26px;
-    }
+    .membro img:hover { transform: scale(1.05); }
+    .membro h4 { font-size: 19px; color: var(--primaria); margin-bottom: 2px; }
+    .membro p { font-size: 16px; font-weight: bold; color:#1f2933; margin-bottom: 26px; }
 
     .familia {
       background-color: white;
@@ -332,15 +239,10 @@
     }
 
     .familia img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border-radius: 12px; 
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      border: none;
-      box-shadow: none;
+      width: 100%; max-width: 800px; height: auto;
+      border-radius: 12px; object-fit: cover;
+      display: block; margin: 0 auto;
+      border: none; box-shadow: none;
     }
 
     /* ZOOM MODAL */
@@ -361,59 +263,41 @@
       text-align: center;
     }
 
-    .zoom-overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
+    .zoom-overlay.active { opacity: 1; pointer-events: all; }
 
     .zoom-overlay img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 250px; height: 250px;
+      border-radius: 50%; object-fit: cover;
       animation: zoomIn 0.4s ease forwards;
     }
 
     #zoomImage.membro {
-      width: 250px;
-      height: 250px;
-      border: 2px solid white; 
-      border-radius: 50%;
-      object-fit: cover;
+      width: 250px; height: 250px;
+      border: 2px solid white;
+      border-radius: 50%; object-fit: cover;
     }
 
     #zoomImage.familia {
-      width: 90%;
-      max-width: 600px;
-      height: auto;
+      width: 90%; max-width: 600px; height: auto;
       border: 2px solid white;
-      border-radius: 12px;
-      object-fit: contain;
+      border-radius: 12px; object-fit: contain;
     }
 
     @keyframes zoomIn {
-      from { 
-        transform: scale(0.5); 
-        opacity: 0; 
-      }
-      to { transform: scale(1); 
-        opacity: 1; 
-      }
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     .close-btn {
       position: absolute;
-      top: 30px;
-      right: 40px;
+      top: 30px; right: 40px;
       font-size: 2rem;
       color: white;
       cursor: pointer;
       transition: 0.3s;
     }
 
-    .close-btn:hover { 
-      color: var(--destaque); 
-    }
+    .close-btn:hover { color: var(--destaque); }
 
     .zoom-caption {
       color: white;
@@ -421,7 +305,7 @@
       animation: fadeCaption 0.5s ease forwards;
     }
 
-    .zoom-caption em{
+    .zoom-caption em {
       display:block;
       margin-top:8px;
       font-style: italic;
@@ -432,14 +316,8 @@
     }
 
     @keyframes fadeCaption {
-      from { 
-        opacity: 0; 
-        transform: translateY(10px); 
-      }
-      to { 
-        opacity: 1; 
-        transform: translateY(0); 
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* SUGESTÕES */
@@ -453,11 +331,7 @@
       text-align: center;
     }
 
-    .sugestoes-box i {
-      font-size: 3rem;
-      color: var(--destaque);
-      margin-bottom: 15px;
-    }
+    .sugestoes-box i { font-size: 3rem; color: var(--destaque); margin-bottom: 15px; }
 
     .sugestoes-box a {
       display: inline-block;
@@ -470,9 +344,7 @@
       transition: 0.3s;
     }
 
-    .sugestoes-box a:hover { 
-      background: var(--destaque);
-    }
+    .sugestoes-box a:hover { background: var(--destaque); }
 
     .social {
       display: flex;
@@ -487,10 +359,7 @@
       transition: transform 0.3s, color 0.3s;
     }
 
-    .social a:hover { 
-      transform: scale(1.2); 
-      color: var(--destaque); 
-    }
+    .social a:hover { transform: scale(1.2); color: var(--destaque); }
 
     footer {
       background-color: var(--primaria);
@@ -499,29 +368,249 @@
       padding: 20px;
     }
 
+    /* ============================
+       ESTATUTO
+    ============================ */
+
+    .estatuto-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      margin-bottom: 35px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .estatuto-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 60% 40%, rgba(218,61,14,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .estatuto-hero i.doc-icon {
+      font-size: 3.5rem;
+      color: var(--destaque);
+      margin-bottom: 15px;
+      display: block;
+      filter: drop-shadow(0 0 12px rgba(218,61,14,0.5));
+    }
+
+    .estatuto-hero h3 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .estatuto-hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .download-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--destaque);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 18px rgba(218,61,14,0.45);
+    }
+
+    .btn-download:hover {
+      background: #b83208;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(218,61,14,0.55);
+    }
+
+    .btn-download i { font-size: 1.1rem; }
+
+    .download-meta {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .download-meta i { font-size: 0.75rem; }
+
+    /* Índice de capítulos */
+    .estatuto-index {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      padding: 28px 30px;
+      margin-bottom: 28px;
+    }
+
+    .estatuto-index h4 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--destaque);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .capitulos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+    }
+
+    .cap-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: var(--texto);
+    }
+
+    .cap-item:hover {
+      background: #fff4f0;
+      color: var(--destaque);
+    }
+
+    .cap-num {
+      background: var(--destaque);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: bold;
+      padding: 2px 7px;
+      border-radius: 20px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    .cap-item span { font-size: 0.9rem; line-height: 1.4; }
+
+    /* Conteúdo do estatuto */
+    .estatuto-corpo {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      padding: 36px 40px;
+      max-width: 820px;
+      margin: 0 auto;
+      font-size: 0.97rem;
+      line-height: 1.75;
+      color: #2a2a2a;
+    }
+
+    .estatuto-corpo h1 {
+      text-align: center;
+      font-size: 1.35rem;
+      color: var(--primaria);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .estatuto-corpo .subtitulo {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--destaque);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cap-titulo {
+      margin: 32px 0 4px 0;
+      padding: 8px 16px;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      scroll-margin-top: 20px;
+    }
+
+    .sec-titulo {
+      margin: 22px 0 6px 0;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--destaque);
+      font-weight: bold;
+      border-left: 3px solid var(--destaque);
+      padding-left: 10px;
+    }
+
+    .artigo {
+      margin: 14px 0 6px 0;
+    }
+
+    .artigo strong {
+      color: var(--primaria);
+    }
+
+    .inciso {
+      margin: 4px 0 4px 24px;
+      color: #3a3a3a;
+    }
+
+    .paragrafo {
+      margin: 6px 0 6px 16px;
+      color: #3a3a3a;
+      font-style: italic;
+    }
+
+    .paragrafo strong { font-style: normal; }
+
+    .lei-destaque {
+      display: inline-block;
+      background: #fff4f0;
+      color: var(--destaque);
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 0 5px;
+    }
+
     @media (max-width: 650px) {
-      header img {
-        width: 200px;
-      }
-
-      header h1 { 
-        font-size: 2rem; 
-      }
-
-      header p { 
-        font-size: 1rem; 
-      }
-
-      /*.card { 
-        filter: blur(4px); 
-      }*/
+      header img { width: 200px; }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      .estatuto-corpo { padding: 24px 18px; }
+      .estatuto-hero { padding: 30px 18px; }
     }
   </style>
 </head>
 
 <body>
 <header>
-  
   <div>
     <img src="flama.png" alt="Logo da Chapa" width="300px" style="justify-content: center; background-color:#fff; border-radius: 100%; filter: none;">
   </div>
@@ -531,27 +620,27 @@
   <a href="#" onclick="mostrar('sobre')">Sobre</a>
   <a href="#" onclick="mostrar('propostas')">Propostas</a>
   <a href="#" onclick="mostrar('equipe')">Equipe</a>
+  <a href="#" onclick="mostrar('estatuto')">Estatuto</a>
   <a href="#" onclick="mostrar('sugestoes')">Sugestões</a>
   <a href="#" onclick="mostrar('contato')">Contato</a>
 </nav>
 
+<!-- SOBRE -->
 <section id="sobre" class="section-content active">
   <div class="info">
   <div class="info-bloco">
-  <h2>Quem Somos</h2>
-  <p>
-    Nós da FLAMA (Frente Líder de Atuação e Movimento Acadêmico) temos como prioridade o bem-estar dos aluno em âmbito escolar! Somos uma chapa formada por estudantes comprometidos em melhorar a vida escolar,
-    fortalecer a voz dos alunos e criar um ambiente mais inclusivo. 
-  </p>
+    <h2>Quem Somos</h2>
+    <p>
+      Nós da FLAMA (Frente Líder de Atuação e Movimento Acadêmico) temos como prioridade o bem-estar dos aluno em âmbito escolar! Somos uma chapa formada por estudantes comprometidos em melhorar a vida escolar,
+      fortalecer a voz dos alunos e criar um ambiente mais inclusivo. 
+    </p>
   </div>
-
   <div class="info-bloco">
     <h2>O que é um Grêmio Estudantil?</h2>
     <p>
-       Segundo a <a href="https://www.ubes.org.br/2022/gremio-estudantil-o-que-e-e-por-que-fazer-parte-de-um/" target="_blank"> UBES (União Brasileira dos Estudantes Secundaristas) </a> O Grêmio Estudantil é uma organização autônoma e democrática, formada por alunos, que representa a voz dos estudantes e defende seus interesses na escola. Sua principal função é promover a cidadania, melhorar o ambiente escolar, organizar atividades culturais, esportivas e sociais, além de mediar a comunicação entre os alunos e a gestão escolar.
+      Segundo a <a href="https://www.ubes.org.br/2022/gremio-estudantil-o-que-e-e-por-que-fazer-parte-de-um/" target="_blank">UBES (União Brasileira dos Estudantes Secundaristas)</a> O Grêmio Estudantil é uma organização autônoma e democrática, formada por alunos, que representa a voz dos estudantes e defende seus interesses na escola. Sua principal função é promover a cidadania, melhorar o ambiente escolar, organizar atividades culturais, esportivas e sociais, além de mediar a comunicação entre os alunos e a gestão escolar.
     </p>
   </div>
-
   <div class="info-bloco">
     <h2>Funções dos Cargos</h2>
     <ul>
@@ -562,10 +651,10 @@
       <li><b style="color: var(--destaque);">Diretorias:</b> responsáveis por áreas como cultura, esportes, imprensa e ações sociais.</li>
     </ul>
   </div>
-
   </div>
 </section>
 
+<!-- PROPOSTAS -->
 <section id="propostas" class="section-content">
   <h2>Nossas Propostas</h2>
   <div class="cards">
@@ -578,36 +667,266 @@
   </div>
 </section>
 
+<!-- EQUIPE -->
 <section id="equipe" class="section-content">
   <h2 style="margin: 25px 0px 15px 0px;">Família FLAMA</h2>
   <div class="familia"><img src="familia.jpeg"></div>
   <h2>Nossa Equipe</h2>
   <div class="membros">
-    <div class="membro"><img src="naila.jpeg" data-texto="Como responsável pelo cargo de presidente, pretendo representar as vontades e necessidades dos estudantes dentro e fora do ambiente escolar, ser uma ponte para mudanças, auxiliar no cumprimento dos nossos deveres e ser voz na reivindicação de nossos direitos. Por uma escola mais participativa, justa e acolhedora para todos."><h4>Presidente</h4> <p>Naila Peixoto</p></div>
-    <div class="membro"><img src="allanna.jpeg" data-texto="Como responsável pelo cargo de vice-presidente, pretendo atuar como braço direito do presidente, comprometendo-me com a organização, representação e execução das pautas tratadas pela equipe. Além disso, junto ao presidente, buscarei auxiliar na coordenação geral da chapa e na representação do grêmio perante a comunidade escolar."><h4>Vice-Presidente</h4> <p>Allanna Beatriz</p></div>
-    <div class="membro"><img src="sofia.jpeg" data-texto="Como responsável pelo cargo de secretária do grêmio estudantil, pretendo organizar documentos, atas e ofícios, auxiliar na organização e promoção de eventos, além de atuar como braço direito da presidência, contribuindo para o bom funcionamento das atividades do grêmio."><h4>Secretária</h4> <p>Sofia Diniz</p></div>
-    <div class="membro"><img src="nikolas.jpeg" data-texto="Como responsável pelo cargo de primeiro secretário do grêmio estudantil, pretendo contribuir para um grêmio mais organizado, transparente e eficiente. Meu compromisso é registrar com atenção tudo o que for discutido e decidido, garantindo que as informações sejam claras e acessíveis para todos. Além disso, buscarei auxiliar na comunicação entre os membros do grêmio e colaborar para que as ideias e projetos sejam bem planejados e colocados em prática."><h4>Primeiro Secretário</h4> <p>Nikolas Raphael</p></div>
-    <div class="membro"><img src="david.jpeg" data-texto="Como responsável pelo cargo de tesoureiro geral do grêmio estudantil, pretendo administrar as finanças com responsabilidade, organização e transparência, mantendo um controle claro dos recursos. Além disso, buscarei participar do planejamento de eventos e projetos, auxiliar na organização dos recursos e propor ideias para arrecadação, sempre utilizando o dinheiro de forma consciente, dedicada e honesta, contribuindo para um grêmio mais organizado e eficiente."><h4>Tesoureiro</h4> <p>David Rubens</p></div>
-    <div class="membro"><img src="nadyne.jpeg" data-texto="Como responsável pelo cargo de tesoureira do grêmio estudantil, pretendo cuidar dos recursos com responsabilidade e transparência, sempre pensando no bem de todos. Além disso, buscarei investir em projetos e melhorias para a escola, ouvindo as ideias dos alunos e contribuindo para um grêmio mais organizado e ativo."><h4>Primeira Tesoureira</h4> <p>Nadyne Ferreira</p></div>
-    <div class="membro"><img src="joaop.jpeg" data-texto="Como responsável pelo cargo de diretor social, pretendo organizar eventos e atividades que promovam a integração dos alunos com a escola, buscando fortalecer a convivência e a participação estudantil. Além disso, trabalharei em conjunto com a equipe do grêmio, coordenando ações sociais e iniciativas que tornem o ambiente escolar mais acolhedor, participativo e dinâmico para todos."><h4>Diretoria Social</h4> <p>João Pedro</p></div>
-    <div class="membro"><img src="gabriela.jpeg" data-texto="Como responsável pelo cargo de suplente-diretora social, pretendo organizar eventos da escola, auxiliar na integração dos alunos com a escola, em conjunto com o diretor social, além de substituí-lo quando não puder estar presente"><h4>Suplente de Diretoria Social</h4> <p>Gabriela Vasconcelos</p></div>
-    <div class="membro"><img src="pedro.jpeg" data-texto="Como responsável pelo cargo de diretor de imprensa, pretendo divulgar nossos princípios, ideias e ações, levando nossos ideais a todos os estudantes por meio de postagens, campanhas e materiais informativos. Além disso, buscarei garantir que cada estudante saiba quem somos e o que defendemos, criando também espaços para que os alunos tenham voz dentro e fora da escola."><h4>Diretoria de Imprensa</h4> <p>Pedro Henrique</p></div>
-    <div class="membro"><img src="joaov.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de imprensa, pretendo atuar junto ao diretor de imprensa na comunicação da chapa com os estudantes. Buscarei auxiliar na produção e divulgação de conteúdos, como textos, artes e publicações nas redes sociais, apresentando de forma clara as propostas, ideias e ações do grupo. Além disso, pretendo contribuir no planejamento da comunicação da chapa e apoiar o diretor de imprensa nas demandas da área, garantindo que as informações cheguem aos alunos de maneira organizada e acessível."><h4>Suplente de Diretoria de Imprensa</h4> <p>João Vitor</p></div>
-    <div class="membro"><img src="levi.jpeg" data-texto="Como responsável pelo cargo de diretor de esportes, pretendo atuar na melhoria, no conforto e na valorização das modalidades esportivas da escola, contando com o apoio coletivo de análises e propostas dos alunos. Além disso, pretendo ouvir ideias por meio de sugestões e seleção de propostas, buscando colocar em prática projetos que fortaleçam o esporte e a participação dos estudantes na escola."><h4>Diretoria de Esportes</h4> <p>Levi Gomes</p></div>
-    <div class="membro"><img src="fernanda.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de esportes, pretendo auxiliar nas atividades e iniciativas esportivas da escola, contribuindo para manter os estudantes em movimento e incentivar a prática de exercícios de forma divertida. Além disso, buscarei explorar novas atividades e modalidades, para que cada aluno possa descobrir aquilo que mais lhe interessa. Também pretendo estar sempre disponível para colaborar com os estudantes e com a equipe do grêmio, ajudando a tornar a Escola Técnica Estadual Ministro Fernando Lyra um espaço mais agradável e participativo para todos."><h4>Suplente de Diretoria de Esportes</h4> <p>Fernanda Medeiros</p></div>
-    <div class="membro"><img src="milena.jpeg" data-texto="Como responsável pelo cargo de diretora de cultura, pretendo coordenar e planejar atividades culturais, como festivais, exposições, palestras e apresentações, contando com o apoio e a participação dos alunos. Além disso, buscarei criar oportunidades para que todos possam se envolver em atividades artísticas, como teatro, música, dança e literatura, fortalecendo assim a cultura e a integração na comunidade escolar."><h4>Diretoria de Cultura</h4> <p>Milena Heloá</p></div>
-    <div class="membro"><img src="eloa.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de cultura, pretendo incentivar a arte no ambiente escolar, especialmente por meio da dança, explorando diferentes estilos e promovendo a participação dos alunos. Além disso, buscarei contribuir para tornar a escola um espaço mais criativo, inclusivo e cheio de expressão."><h4>Suplente de Diretoria de Cultura</h4> <p>Eloá Neves</p></div>
-    <div class="membro"><img src="maisa.jpeg" data-texto="Como responsável pelo cargo de diretora de Saúde e Meio Ambiente, pretendo desenvolver projetos que deem visibilidade a problemas muitas vezes não percebidos, buscando soluções inovadoras e diversas. Além disso, trabalharei em ações que contribuam para a melhoria da saúde, do meio ambiente e do bem-estar no âmbito escolar."><h4>Diretoria de Saúde e Meio Ambiente</h4> <p>Maisa Sabrina</p></div>
-    <div class="membro"><img src="gustavo.jpeg" data-texto="Como responsável pelo cargo de suplente da diretoria de Saúde e Meio Ambiente, pretendo atuar em conjunto na construção de projetos que deem visibilidade a problemas muitas vezes negligenciados. Além disso, buscarei apoiar a implementação de soluções inovadoras e diversificadas, contribuindo para que as ações promovam a saúde, a preservação ambiental e o bem-estar de todos no ambiente escolar."><h4>Suplente de Diretoria de Saúde e Meio Ambiente</h4> <p>Gustavo Juan</p></div>
+    <div class="membro"><img src="naila.jpeg" data-texto="Como responsável pelo cargo de presidente, pretendo representar as vontades e necessidades dos estudantes dentro e fora do ambiente escolar, ser uma ponte para mudanças, auxiliar no cumprimento dos nossos deveres e ser voz na reivindicação de nossos direitos. Por uma escola mais participativa, justa e acolhedora para todos."><h4>Presidente</h4><p>Naila Peixoto</p></div>
+    <div class="membro"><img src="allanna.jpeg" data-texto="Como responsável pelo cargo de vice-presidente, pretendo atuar como braço direito do presidente, comprometendo-me com a organização, representação e execução das pautas tratadas pela equipe. Além disso, junto ao presidente, buscarei auxiliar na coordenação geral da chapa e na representação do grêmio perante a comunidade escolar."><h4>Vice-Presidente</h4><p>Allanna Beatriz</p></div>
+    <div class="membro"><img src="sofia.jpeg" data-texto="Como responsável pelo cargo de secretária do grêmio estudantil, pretendo organizar documentos, atas e ofícios, auxiliar na organização e promoção de eventos, além de atuar como braço direito da presidência, contribuindo para o bom funcionamento das atividades do grêmio."><h4>Secretária</h4><p>Sofia Diniz</p></div>
+    <div class="membro"><img src="nikolas.jpeg" data-texto="Como responsável pelo cargo de primeiro secretário do grêmio estudantil, pretendo contribuir para um grêmio mais organizado, transparente e eficiente. Meu compromisso é registrar com atenção tudo o que for discutido e decidido, garantindo que as informações sejam claras e acessíveis para todos. Além disso, buscarei auxiliar na comunicação entre os membros do grêmio e colaborar para que as ideias e projetos sejam bem planejados e colocados em prática."><h4>Primeiro Secretário</h4><p>Nikolas Raphael</p></div>
+    <div class="membro"><img src="david.jpeg" data-texto="Como responsável pelo cargo de tesoureiro geral do grêmio estudantil, pretendo administrar as finanças com responsabilidade, organização e transparência, mantendo um controle claro dos recursos. Além disso, buscarei participar do planejamento de eventos e projetos, auxiliar na organização dos recursos e propor ideias para arrecadação, sempre utilizando o dinheiro de forma consciente, dedicada e honesta, contribuindo para um grêmio mais organizado e eficiente."><h4>Tesoureiro</h4><p>David Rubens</p></div>
+    <div class="membro"><img src="nadyne.jpeg" data-texto="Como responsável pelo cargo de tesoureira do grêmio estudantil, pretendo cuidar dos recursos com responsabilidade e transparência, sempre pensando no bem de todos. Além disso, buscarei investir em projetos e melhorias para a escola, ouvindo as ideias dos alunos e contribuindo para um grêmio mais organizado e ativo."><h4>Primeira Tesoureira</h4><p>Nadyne Ferreira</p></div>
+    <div class="membro"><img src="joaop.jpeg" data-texto="Como responsável pelo cargo de diretor social, pretendo organizar eventos e atividades que promovam a integração dos alunos com a escola, buscando fortalecer a convivência e a participação estudantil."><h4>Diretoria Social</h4><p>João Pedro</p></div>
+    <div class="membro"><img src="gabriela.jpeg" data-texto="Como responsável pelo cargo de suplente-diretora social, pretendo organizar eventos da escola, auxiliar na integração dos alunos com a escola, em conjunto com o diretor social, além de substituí-lo quando não puder estar presente"><h4>Suplente de Diretoria Social</h4><p>Gabriela Vasconcelos</p></div>
+    <div class="membro"><img src="pedro.jpeg" data-texto="Como responsável pelo cargo de diretor de imprensa, pretendo divulgar nossos princípios, ideias e ações, levando nossos ideais a todos os estudantes por meio de postagens, campanhas e materiais informativos."><h4>Diretoria de Imprensa</h4><p>Pedro Henrique</p></div>
+    <div class="membro"><img src="joaov.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de imprensa, pretendo atuar junto ao diretor de imprensa na comunicação da chapa com os estudantes. Buscarei auxiliar na produção e divulgação de conteúdos, como textos, artes e publicações nas redes sociais."><h4>Suplente de Diretoria de Imprensa</h4><p>João Vitor</p></div>
+    <div class="membro"><img src="levi.jpeg" data-texto="Como responsável pelo cargo de diretor de esportes, pretendo atuar na melhoria, no conforto e na valorização das modalidades esportivas da escola, contando com o apoio coletivo de análises e propostas dos alunos."><h4>Diretoria de Esportes</h4><p>Levi Gomes</p></div>
+    <div class="membro"><img src="fernanda.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de esportes, pretendo auxiliar nas atividades e iniciativas esportivas da escola, contribuindo para manter os estudantes em movimento e incentivar a prática de exercícios de forma divertida."><h4>Suplente de Diretoria de Esportes</h4><p>Fernanda Medeiros</p></div>
+    <div class="membro"><img src="milena.jpeg" data-texto="Como responsável pelo cargo de diretora de cultura, pretendo coordenar e planejar atividades culturais, como festivais, exposições, palestras e apresentações, contando com o apoio e a participação dos alunos."><h4>Diretoria de Cultura</h4><p>Milena Heloá</p></div>
+    <div class="membro"><img src="eloa.jpeg" data-texto="Como responsável pelo cargo de suplente de diretoria de cultura, pretendo incentivar a arte no ambiente escolar, especialmente por meio da dança, explorando diferentes estilos e promovendo a participação dos alunos."><h4>Suplente de Diretoria de Cultura</h4><p>Eloá Neves</p></div>
+    <div class="membro"><img src="maisa.jpeg" data-texto="Como responsável pelo cargo de diretora de Saúde e Meio Ambiente, pretendo desenvolver projetos que deem visibilidade a problemas muitas vezes não percebidos, buscando soluções inovadoras e diversas."><h4>Diretoria de Saúde e Meio Ambiente</h4><p>Maisa Sabrina</p></div>
+    <div class="membro"><img src="gustavo.jpeg" data-texto="Como responsável pelo cargo de suplente da diretoria de Saúde e Meio Ambiente, pretendo atuar em conjunto na construção de projetos que deem visibilidade a problemas muitas vezes negligenciados."><h4>Suplente de Diretoria de Saúde e Meio Ambiente</h4><p>Gustavo Juan</p></div>
   </div>
 </section>
 
+<!-- ESTATUTO -->
+<section id="estatuto" class="section-content">
+  <h2>Estatuto</h2>
+
+  <!-- Hero com download -->
+  <div class="estatuto-hero">
+    <i class="fa-solid fa-scroll doc-icon"></i>
+    <h3>Estatuto Social do Grêmio Estudantil</h3>
+    <p>Rickielton Lisboa — ETEMFL, Caruaru/PE · Fundado em 2019</p>
+    <div class="download-area">
+      <a class="btn-download" href="ESTATUTO_GREMIO_ESTUDANTIL_RICKIELTON_LISBOA.docx" download>
+        <i class="fa-solid fa-download"></i> Baixar Estatuto (.docx)
+      </a>
+      <span class="download-meta"><i class="fa-solid fa-file-word"></i> Documento Word · versão oficial</span>
+    </div>
+  </div>
+
+  <!-- Índice de capítulos -->
+  <div class="estatuto-index">
+    <h4><i class="fa-solid fa-list-ul"></i> Índice de Capítulos</h4>
+    <div class="capitulos-grid">
+      <a class="cap-item" href="#cap1"><span class="cap-num">Cap. I</span><span>Denominação, Sede e Objetivos</span></a>
+      <a class="cap-item" href="#cap2"><span class="cap-num">Cap. II</span><span>Patrimônio, Constituição e Utilização</span></a>
+      <a class="cap-item" href="#cap3"><span class="cap-num">Cap. III</span><span>Organização do Grêmio Estudantil</span></a>
+      <a class="cap-item" href="#cap4"><span class="cap-num">Cap. IV</span><span>Conselho Fiscal</span></a>
+      <a class="cap-item" href="#cap5"><span class="cap-num">Cap. V</span><span>Dos Associados</span></a>
+      <a class="cap-item" href="#cap6"><span class="cap-num">Cap. VI</span><span>Regime Disciplinar</span></a>
+      <a class="cap-item" href="#cap7"><span class="cap-num">Cap. VII</span><span>Regime Eleitoral</span></a>
+      <a class="cap-item" href="#cap8"><span class="cap-num">Cap. VIII</span><span>Das Reuniões</span></a>
+      <a class="cap-item" href="#cap9"><span class="cap-num">Cap. IX</span><span>Da Escrituração</span></a>
+      <a class="cap-item" href="#cap10"><span class="cap-num">Cap. X</span><span>Da Dissolução</span></a>
+      <a class="cap-item" href="#cap11"><span class="cap-num">Cap. XI</span><span>Disposições Gerais e Transitórias</span></a>
+    </div>
+  </div>
+
+  <!-- Texto completo do Estatuto -->
+  <div class="estatuto-corpo">
+    <h1>Estatuto Social do Grêmio Estudantil</h1>
+    <div class="subtitulo">Rickielton Lisboa</div>
+
+    <div class="cap-titulo" id="cap1">Capítulo I — Denominação, Sede e Objetivos</div>
+
+    <p class="artigo"><strong>Art. 1º</strong> O Grêmio Estudantil Rickielton Lisboa é o órgão de representação dos estudantes da Escola Técnica Estadual Ministro Fernando Lyra localizada na cidade de Caruaru, estado de Pernambuco e fundado em 11 de novembro de 2019 (dois mil e dezenove) com sede neste Estabelecimento de Ensino.</p>
+    <p class="paragrafo"><strong>Parágrafo Único</strong> — As atividades do Grêmio reger-se-ão pelo presente Estatuto aprovado em Assembleia Geral convocada para este fim.</p>
+
+    <p class="artigo"><strong>Art. 2º</strong> O Grêmio tem por objetivos:</p>
+    <p class="inciso">I – Representar condignamente o corpo discente;</p>
+    <p class="inciso">II – Defender os interesses individuais e coletivos dos alunos da Escola;</p>
+    <p class="inciso">III – Incentivar a cultura literária, artística e desportiva de seus membros;</p>
+    <p class="inciso">IV – Promover a cooperação entre administradores, funcionários, professores e alunos no trabalho escolar buscando seus aprimoramentos;</p>
+    <p class="inciso">V – Realizar intercâmbio e colaboração de caráter cultural e educacional com outras instituições, assim como a filiação às entidades gerais UESC, UESPE e UBES;</p>
+    <p class="inciso">VI – Lutar pela democracia permanente na Escola, através do direito de participação nos fóruns internos de deliberação da Escola.</p>
+
+    <div class="cap-titulo" id="cap2">Capítulo II — Patrimônio, sua Constituição e Utilização</div>
+
+    <p class="artigo"><strong>Art. 3º</strong> O patrimônio do Grêmio se constituirá por:</p>
+    <p class="inciso">I – Contribuição voluntária de seus membros;</p>
+    <p class="inciso">II – Contribuição de Terceiros;</p>
+    <p class="inciso">III – Subvenções, juros, correções ou dividendos resultantes das contribuições;</p>
+    <p class="inciso">IV – Rendimentos de bens móveis e imóveis que o Grêmio venha a possuir;</p>
+    <p class="inciso">V – Rendimentos auferidos em promoções da entidade.</p>
+
+    <p class="artigo"><strong>Art. 4°</strong> A Diretoria será responsável pelos bens patrimoniais do Grêmio e responsável por eles perante as instâncias deliberativas.</p>
+    <p class="paragrafo"><strong>§ 1°</strong> Ao assumir a Diretoria do Grêmio, o Presidente e o Tesoureiro deverão assinar um recibo para o Conselho Fiscal, discriminando todos os bens da entidade.</p>
+    <p class="paragrafo"><strong>§ 2°</strong> Ao final de cada mandato, o Conselho Fiscal conferirá os bens e providenciará outro recibo que deverá ser assinado pela nova Diretoria.</p>
+    <p class="paragrafo"><strong>§ 3°</strong> Em caso de ser constatada alguma irregularidade na gestão dos bens, o Conselho Fiscal fará um relatório e o entregará ao Conselho de Representantes de Turmas e à Assembleia Geral para serem tomadas as providências cabíveis.</p>
+    <p class="paragrafo"><strong>§ 4°</strong> O Grêmio não se responsabilizará por obrigações contraídas por estudantes ou grupos sem ter havido prévia autorização da Diretoria.</p>
+
+    <div class="cap-titulo" id="cap3">Capítulo III — Da Organização do Grêmio Estudantil</div>
+
+    <p class="artigo"><strong>Art. 5º</strong> São instâncias deliberativas do Grêmio:</p>
+    <p class="inciso">I – Assembleia Geral dos Estudantes;</p>
+    <p class="inciso">II – Conselho de Representantes de Turmas (CRT);</p>
+    <p class="inciso">III – Diretoria do Grêmio;</p>
+    <p class="inciso">IV – Conselho Fiscal (CF).</p>
+
+    <div class="sec-titulo">Seção I — Da Assembleia Geral dos Estudantes</div>
+
+    <p class="artigo"><strong>Art. 6°</strong> A Assembleia Geral é o órgão máximo de deliberação da entidade nos termos deste Estatuto e compõe-se de todos os sócios do Grêmio Estudantil Rickielton Lisboa e excepcionalmente, por convidados da entidade, que se absterão do direito de voto.</p>
+
+    <p class="artigo"><strong>Art. 7°</strong> A Assembleia Geral se reunirá ordinariamente:</p>
+    <p class="inciso">I – Nas datas estipuladas pelos estudantes na própria Assembleia;</p>
+    <p class="inciso">II – Ao término de cada mandato para deliberar sobre a prestação de contas da Diretoria, parecer do Conselho Fiscal e formação da Comissão Eleitoral (CE) que deliberará sobre as eleições para a nova Diretoria do Grêmio.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> A convocação para a Assembleia será feita em Edital com antecedência mínima de quarenta e oito horas (48), sendo esta de competência da Diretoria do Grêmio.</p>
+
+    <p class="artigo"><strong>Art. 8°</strong> A Assembleia Geral se reunirá extraordinariamente quando convocada por 2/3 do Conselho Fiscal ou 2/3 do Conselho de Representantes de Turma ou 50% + 1 da Diretoria do Grêmio. Em qualquer caso, a convocação será feita com o mínimo de antecedência de 24 horas.</p>
+
+    <p class="artigo"><strong>Art. 9º</strong> As Assembleias Gerais devem ser realizadas, em primeira convocação, com a presença de mais da metade dos alunos da Escola ou, em segunda convocação, trinta minutos depois, com qualquer número de alunos.</p>
+    <p class="paragrafo"><strong>§ 1º</strong> A Assembleia Geral vai deliberar com maioria simples dos votos, sendo obrigatório o quorum mínimo de 10% dos alunos da Escola para sua instalação.</p>
+    <p class="paragrafo"><strong>§ 2º</strong> A Diretoria será responsável pela manutenção da limpeza e da ordem quando for realizado qualquer evento, Assembleias ou reunião do Grêmio.</p>
+
+    <p class="artigo"><strong>Art. 10º</strong> Compete à Assembleia Geral:</p>
+    <p class="inciso">I – Aprovar e reformular o Estatuto do Grêmio;</p>
+    <p class="inciso">II – Eleger a Diretoria do Grêmio;</p>
+    <p class="inciso">III – Discutir e votar as teses, recomendações, moções, adendos e propostas apresentados por qualquer um de seus membros;</p>
+    <p class="inciso">IV – Denunciar, suspender ou destituir diretores do Grêmio, garantido o direito de defesa do acusado, sendo que qualquer decisão neste sentido seja igual ou superior a 2/3 dos votos;</p>
+    <p class="inciso">V – Receber e considerar os relatórios da Diretoria do Grêmio e sua prestação de contas, apresentada juntamente com o Conselho Fiscal;</p>
+    <p class="inciso">VI – Marcar, caso necessário, Assembleia Extraordinária, com dia, hora e pautas fixadas;</p>
+    <p class="inciso">VII – Aprovar a constituição da Comissão Eleitoral, sempre composta com alunos de todos os turnos em funcionamento na Escola.</p>
+
+    <div class="sec-titulo">Seção II — Do Conselho de Representantes de Turmas</div>
+
+    <p class="artigo"><strong>Art. 11º</strong> O Conselho de Representantes de Turmas (CRT) é a instância intermediária de deliberação do Grêmio, é o órgão de representação exclusiva dos estudantes, e será constituído somente pelos representantes de turmas, eleitos anualmente pelos estudantes de cada turma.</p>
+
+    <p class="artigo"><strong>Art. 12º</strong> O CRT se reunirá ordinariamente uma vez por mês e extraordinariamente quando convocado pela Diretoria do Grêmio.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> O CRT funcionará com a presença da maioria absoluta de seus membros, deliberando por maioria simples de voto.</p>
+
+    <p class="artigo"><strong>Art. 13º</strong> O CRT será eleito anualmente em data a ser deliberada pelo Grêmio e/ou equipe pedagógica.</p>
+
+    <p class="artigo"><strong>Art. 14º</strong> Compete ao Conselho de Representantes de Turmas:</p>
+    <p class="inciso">I – Discutir e votar sobre propostas da Assembleia Geral e da Diretoria do Grêmio;</p>
+    <p class="inciso">II – Velar pelo cumprimento do Estatuto do Grêmio e deliberar sobre os casos omissos;</p>
+    <p class="inciso">III – Assessorar a Diretoria do Grêmio na execução de seu programa administrativo;</p>
+    <p class="inciso">IV – Apreciar as atividades da Diretoria do Grêmio, podendo convocar para esclarecimentos qualquer um de seus membros;</p>
+    <p class="inciso">V – Deliberar, dentro dos limites legais, sobre assuntos do interesse do corpo discente de cada turma representada;</p>
+    <p class="inciso">VI – Deliberar sobre a vacância de cargos da Diretoria do Grêmio.</p>
+
+    <div class="sec-titulo">Seção III — Da Diretoria do Grêmio</div>
+
+    <p class="artigo"><strong>Art. 15º</strong> A Diretoria do Grêmio será constituída pelos seguintes cargos:</p>
+    <p class="inciso">I – Presidente; II – Vice-Presidente; III – Secretário-Geral; IV – 1° Secretário; V – Tesoureiro-Geral; VI – 1° Tesoureiro; VII – Diretor Social; VIII – Diretor de Relações Estudantis; IX – Diretor de Imprensa; X – Diretor de Esportes; XI – Diretor de Cultura; XII – Diretor de Saúde e Meio Ambiente; XIII – Suplentes.</p>
+    <p class="paragrafo"><strong>§ 1º</strong> Cada diretor conta com um suplente e uma equipe de alunos convidados pelo diretor eleito.</p>
+    <p class="paragrafo"><strong>§ 2º</strong> É proibido o acúmulo de cargos.</p>
+    <p class="paragrafo"><strong>§ 3º</strong> Na falta de algum dos diretores, o suplente respectivo assumirá o cargo.</p>
+    <p class="paragrafo"><strong>§ 4º</strong> Na falta do suplente, o Presidente propõe outro associado de sua confiança para assumir o cargo vago, tendo que passar por aprovação da Assembleia Geral.</p>
+
+    <p class="artigo"><strong>Art. 16º</strong> Compete ao Presidente: representar o Grêmio; convocar e presidir reuniões; assinar documentos financeiros e correspondência oficial; representar o Grêmio no Conselho Escolar; cumprir e fazer cumprir este Estatuto.</p>
+    <p class="artigo"><strong>Art. 17º</strong> Compete ao Vice-Presidente auxiliar o Presidente e substituí-lo nos casos de ausência ou vacância.</p>
+    <p class="artigo"><strong>Art. 18º</strong> Compete ao Secretário-Geral publicar convocações, lavrar atas, redigir a correspondência oficial do Grêmio e manter em dia os arquivos da entidade.</p>
+    <p class="artigo"><strong>Art. 19º</strong> Compete ao 1º Secretário auxiliar o Secretário-Geral em todas as suas funções e assumir o cargo em caso de vacância.</p>
+    <p class="artigo"><strong>Art. 20º</strong> Compete ao Tesoureiro-Geral controlar os bens do Grêmio, manter em dia a escrituração financeira, assinar documentos com o Presidente e apresentar prestação de contas ao Conselho Fiscal.</p>
+    <p class="artigo"><strong>Art. 21º</strong> Compete ao 1º Tesoureiro auxiliar o Tesoureiro-Geral em todas as suas funções e assumir o cargo em caso de vacância.</p>
+    <p class="artigo"><strong>Art. 22º</strong> Compete ao Diretor Social coordenar as Relações Públicas, organizar festas promovidas pelo Grêmio e zelar pelo bom relacionamento com a Escola e a comunidade.</p>
+    <p class="artigo"><strong>Art. 23º</strong> Compete ao Diretor de Imprensa responder pela comunicação, manter os membros informados, editar o órgão oficial de imprensa e escolher os colaboradores de sua Diretoria.</p>
+    <p class="artigo"><strong>Art. 24º</strong> Compete ao Diretor Cultural promover conferências, exposições, concursos, festivais de música, grupos teatrais e similares.</p>
+    <p class="artigo"><strong>Art. 25º</strong> Compete ao Diretor de Esportes coordenar as atividades esportivas, incentivar a prática de esportes e organizar campeonatos internos.</p>
+    <p class="artigo"><strong>Art. 26º</strong> Compete ao Diretor de Saúde e Meio Ambiente promover palestras sobre saúde e meio ambiente, manter relações com entidades da área e incentivar hábitos de higiene e conservação do ambiente escolar.</p>
+    <p class="artigo"><strong>Art. 27º</strong> Compete ao Diretor de Relações Estudantis estar a par dos projetos da instituição, mediar relações entre alunos, professores e diretores, e realizar reuniões de alinhamento geral quando necessário.</p>
+
+    <div class="cap-titulo" id="cap4">Capítulo IV — Do Conselho Fiscal</div>
+
+    <p class="artigo"><strong>Art. 28º</strong> O Conselho Fiscal se compõe de 03 membros efetivos e 03 suplentes, escolhidos na reunião do CRT entre seus membros.</p>
+    <p class="artigo"><strong>Art. 29º</strong> Ao Conselho Fiscal compete examinar os livros contábeis, lavrar o Livro de Atas e Pareceres, apresentar relatório sobre as atividades econômicas da Diretoria, colher recibos discriminando bens do Grêmio e convocar Assembleia Geral Extraordinária quando ocorrerem motivos graves.</p>
+
+    <div class="cap-titulo" id="cap5">Capítulo V — Dos Associados</div>
+
+    <p class="artigo"><strong>Art. 30º</strong> São sócios do Grêmio todos os alunos matriculados e frequentes.</p>
+    <p class="artigo"><strong>Art. 31º</strong> São direitos do Associado: participar de todas as atividades do Grêmio; votar e ser votado; encaminhar observações, moções e sugestões à Diretoria; propor mudanças neste Estatuto.</p>
+    <p class="artigo"><strong>Art. 32º</strong> São deveres dos Associados: conhecer e cumprir as normas deste Estatuto; informar à Diretoria sobre qualquer violação dos direitos dos estudantes; manter luta incessante pelo fortalecimento do Grêmio.</p>
+
+    <div class="cap-titulo" id="cap6">Capítulo VI — Do Regime Disciplinar</div>
+
+    <p class="artigo"><strong>Art. 33º</strong> Constitui infração disciplinar: usar o Grêmio para fins diferentes de seus objetivos; deixar de cumprir este Estatuto; prestar informações que coloquem em risco a integridade de membros; praticar atos que ridicularizem a entidade; atentar contra os bens do Grêmio.</p>
+    <p class="artigo"><strong>Art. 34º</strong> São competentes para apurar as infrações dos incisos I a IV o CRT, e do item V o Conselho Fiscal.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> Em qualquer das hipóteses será facultado ao infrator o direito de defesa ao CRT, ao CF ou à Assembleia Geral.</p>
+    <p class="artigo"><strong>Art. 35º</strong> Apuradas as infrações, serão discutidas na Assembleia Geral e aplicadas as penas de suspensão ou expulsão do quadro de sócios conforme a gravidade da falta.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> O infrator, caso seja membro da Diretoria, perderá seu mandato, devendo responder pelas perdas e danos perante as instâncias deliberativas do Grêmio.</p>
+
+    <div class="cap-titulo" id="cap7">Capítulo VII — Do Regime Eleitoral</div>
+
+    <div class="sec-titulo">Seção I — Dos Elegíveis e Eleitores</div>
+    <p class="artigo"><strong>Art. 36º</strong> São elegíveis para os cargos da Diretoria todos os brasileiros natos ou naturalizados matriculados e frequentes.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> Para o cargo de Presidente, o aluno não pode estar cursando o 3° ano do Ensino Médio.</p>
+    <p class="artigo"><strong>Art. 37º</strong> São considerados eleitores todos os estudantes matriculados e frequentes.</p>
+
+    <div class="sec-titulo">Seção II — Da Comissão Eleitoral e Forma de Votação</div>
+    <p class="artigo"><strong>Art. 38º</strong> A Comissão Eleitoral deve ser escolhida em Assembleia Geral pelo menos um mês antes do final da gestão, sendo composta por alunos de todos os turnos em funcionamento na Escola. Os alunos da Comissão não poderão concorrer às eleições.</p>
+    <p class="artigo"><strong>Art. 39º</strong> As inscrições de chapas deverão ser feitas com os membros da Comissão Eleitoral, em horários e prazos previamente divulgados, não sendo aceitas inscrições fora do prazo ou horário.</p>
+    <p class="artigo"><strong>Art. 40º</strong> Somente serão aceitas inscrições de chapas completas.</p>
+
+    <div class="sec-titulo">Seção III — Da Propaganda Eleitoral</div>
+    <p class="artigo"><strong>Art. 41º</strong> A propaganda das chapas será através de material conseguido ou confeccionado pela própria chapa.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> É vedada a ajuda de qualquer pessoa que trabalhe na Escola à chapa, na criação, confecção ou fornecimento de material ou dinheiro para a propaganda eleitoral.</p>
+    <p class="artigo"><strong>Art. 42º</strong> É expressamente proibida a campanha eleitoral fora do período estipulado pela Comissão Eleitoral bem como a boca de urna no dia das eleições.</p>
+    <p class="artigo"><strong>Art. 43º</strong> A destruição ou adulteração da inscrição de qualquer chapa, uma vez comprovada pela Comissão Eleitoral, implicará na anulação da inscrição da chapa infratora.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> Toda decisão de impugnação de chapas só poderá ser tomada por maioria absoluta da Comissão Eleitoral, após exame de provas e testemunhas.</p>
+
+    <div class="sec-titulo">Seção IV — Da Votação</div>
+    <p class="artigo"><strong>Art. 44º</strong> O voto será direto e secreto, sendo a votação realizada em local previamente escolhido pela Comissão Eleitoral e aprovado pela Direção Geral do Estabelecimento.</p>
+    <p class="artigo"><strong>Art. 45º</strong> Cada chapa deverá designar um fiscal, identificado com crachá, para acompanhar todo o processo de votação e apuração dos votos.</p>
+    <p class="artigo"><strong>Art. 46º</strong> Só votarão os estudantes presentes em sala na hora da votação.</p>
+    <p class="artigo"><strong>Art. 47º</strong> A apuração dos votos deverá ocorrer logo após o término do processo de votação, em uma sala isolada em que permanecerão apenas os membros da Comissão Eleitoral e os fiscais de chapa.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> Fica assegurado às entidades estudantis o direito de acompanhar todo o processo eleitoral.</p>
+    <p class="artigo"><strong>Art. 48º</strong> Todo ato de anulação de votos ou urnas será efetivado a partir da decisão soberana do Presidente da Comissão Eleitoral.</p>
+    <p class="artigo"><strong>Art. 49º</strong> Não será aceito nenhum pedido de recontagem de votos após a divulgação dos resultados oficiais, salvo nos casos em que se comprove inobservância deste regulamento pela Comissão Eleitoral.</p>
+    <p class="artigo"><strong>Art. 50º</strong> O mandato da Diretoria do Grêmio será de 1 (um) ano a partir da data da posse.</p>
+
+    <div class="sec-titulo">Seção V — Da Posse da Nova Diretoria</div>
+    <p class="artigo"><strong>Art. 51º</strong> Cabe à Comissão Eleitoral dar posse à Diretoria eleita 1 (uma) semana após a data da eleição da mesma.</p>
+
+    <div class="cap-titulo" id="cap8">Capítulo VIII — Das Reuniões</div>
+
+    <p class="artigo"><strong>Art. 52º</strong> As reuniões de quaisquer instâncias deliberativas terão cunho público e serão abertas, devendo realizar-se em sua sede física, ou na sua ausência, em local de fácil acesso aos seus associados, preferencialmente na própria Escola.</p>
+    <p class="paragrafo"><strong>§ 1º</strong> Dos editais de convocação deverão constar: denominação do Grêmio, dia, hora e local; sequência ordinal das convocações; ordem do dia; assinatura do responsável; prestação de contas de tarefas anteriores; leitura da ata da última reunião; assuntos gerais; e duração máxima de 2 (duas) horas.</p>
+    <p class="paragrafo"><strong>§ 2º</strong> No caso de convocação por estudantes, o edital deverá anexar a lista do requerimento assinado pelos signatários.</p>
+    <p class="paragrafo"><strong>§ 3º</strong> Os editais de convocação serão fixados em locais visíveis nas dependências da sede, e poderão ser publicados em jornal e por ofício circular.</p>
+    <p class="paragrafo"><strong>§ 4º</strong> Os membros da Diretoria do Grêmio reunir-se-ão separadamente para analisar e discutir as soluções aos problemas apresentados.</p>
+    <p class="paragrafo"><strong>§ 5º</strong> Os convidados e não estudantes terão assegurados apenas o direito a voz nas reuniões, vedado o direito de votar e ser votado.</p>
+
+    <div class="cap-titulo" id="cap9">Capítulo IX — Da Escrituração</div>
+
+    <p class="artigo"><strong>Art. 53º</strong> O Grêmio Estudantil deverá adotar os seguintes livros de controle:</p>
+    <p class="inciso">I – Livro ata da Diretoria do Grêmio e Assembleia Geral;</p>
+    <p class="inciso">II – Livro ata do Conselho de Representantes de Turmas;</p>
+    <p class="inciso">III – Livro ata do Conselho Fiscal;</p>
+    <p class="inciso">IV – Livro contábil;</p>
+    <p class="inciso">V – Livro de protocolo.</p>
+    <p class="paragrafo"><strong>§ 1º</strong> A escrituração ficará sob a guarda do Secretário-Geral, exceto os livros contábeis e de ata do Conselho Fiscal que ficarão sob a guarda de um de seus membros.</p>
+    <p class="paragrafo"><strong>§ 2º</strong> As atas poderão ser digitadas eletronicamente e publicadas em arquivos PDF no site oficial do Grêmio Estudantil ou divulgadas em seu jornal impresso.</p>
+
+    <div class="cap-titulo" id="cap10">Capítulo X — Da Dissolução</div>
+
+    <p class="artigo"><strong>Art. 54º</strong> A dissolução do Grêmio Estudantil Rickielton Lisboa somente ocorrerá quando a Escola for extinta, ou quando a Assembleia Geral assim deliberar por maioria absoluta de votos, revertendo-se seus bens a entidades congêneres.</p>
+    <p class="artigo"><strong>Art. 55º</strong> A dissolução do Grêmio Estudantil ocorrerá apenas por decisão da Assembleia Geral convocada para este fim, não podendo ela deliberar sem voto concorde de 2/3 (dois terços) dos presentes.</p>
+    <p class="inciso">I – O ponto de pauta obrigatória na Assembleia de dissolução deverá ser a prestação de contas verificada pelo Conselho Fiscal;</p>
+    <p class="inciso">II – Em caso de dissolução, os bens remanescentes serão destinados a outra entidade assistencial congênere, devidamente registrada nos órgãos públicos;</p>
+    <p class="inciso">III – Caso haja dívidas na data da dissolução, estas deverão ser pagas com a venda do patrimônio, sendo doado o saldo conforme o inciso anterior.</p>
+
+    <div class="cap-titulo" id="cap11">Capítulo XI — Disposições Gerais e Transitórias</div>
+
+    <p class="artigo"><strong>Art. 56º</strong> O presente Estatuto poderá ser modificado mediante proposta de qualquer membro do Grêmio, do CRT ou pelos membros em Assembleia Geral.</p>
+    <p class="paragrafo"><strong>Parágrafo Único.</strong> As alterações serão discutidas pela Diretoria, pelo CRT e aprovadas em Assembleia Geral através da maioria absoluta de votos.</p>
+    <p class="artigo"><strong>Art. 57º</strong> As representações dos sócios do Grêmio só serão consideradas pela Diretoria ou pelo CRT quando formuladas por escrito e devidamente fundamentadas e assinadas.</p>
+    <p class="artigo"><strong>Art. 58º</strong> Nenhum sócio poderá se intitular representante do Grêmio sem a devida autorização, por escrito, da Diretoria.</p>
+    <p class="artigo"><strong>Art. 59º</strong> As Ações do Grêmio deverão ser aprovadas pela gestão escolar.</p>
+    <p class="artigo"><strong>Art. 60º</strong> Este Estatuto entrará em vigor após a sua aprovação em Assembleia Geral, configurando a entidade como Grêmio Estudantil autônomo, representante dos estudantes do referido Estabelecimento educacional, não podendo ser proibido ou cancelado por nenhum indivíduo, grupo ou autoridade, conforme a <span class="lei-destaque">Lei Federal 7398/85</span> e a <span class="lei-destaque">Lei Estadual 12.280/02 Art. 22º</span>.</p>
+  </div>
+</section>
+
+<!-- SUGESTÕES -->
 <section id="sugestoes" class="section-content">
   <h2>Sugestões</h2>
   <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:35px;">
     Sua opinião é muito importante! Envie sua sugestão para melhorar o grêmio.
   </p>
-
   <div class="sugestoes-box">
     <i class="fa-solid fa-lightbulb"></i>
     <h3>Enviar Sugestão</h3>
@@ -616,19 +935,14 @@
   </div>
 </section>
 
+<!-- CONTATO -->
 <section id="contato" class="section-content">
   <h2>Fale Conosco</h2>
   <p style="text-align:center;">Siga a chapa nas redes sociais</p>
   <div class="social">
-    <a href="https://www.instagram.com/chapaflama/" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/558189518259" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="mailto:FLAMA.MFL.2026@gmail.com" target="_blank">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
+    <a href="https://www.instagram.com/chapaflama/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/558189518259" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="mailto:FLAMA.MFL.2026@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
   </div>
 </section>
 
@@ -649,9 +963,9 @@
   function mostrar(id) {
     document.querySelectorAll('.section-content').forEach(secao => secao.classList.remove('active'));
     document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Animação ao rolar
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -660,7 +974,6 @@
 
   document.querySelectorAll('.card, .membro').forEach(el => observer.observe(el));
 
-  // Zoom em fotos
   const overlay = document.getElementById('zoomOverlay');
   const zoomImg = document.getElementById('zoomImage');
   const zoomCap = document.getElementById('zoomCaption');
@@ -688,20 +1001,12 @@
   });
 
   function fecharZoom(e) {
-    if (e) {
-      e.stopPropagation();
-      e.preventDefault();
-    }
+    if (e) { e.stopPropagation(); e.preventDefault(); }
     overlay.classList.remove('active');
   }
 
-  document.querySelector('.close-btn').addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) fecharZoom();
-  });
+  document.querySelector('.close-btn').addEventListener('click', (e) => { e.stopPropagation(); });
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) fecharZoom(); });
 </script>
 </body>
 </html>
