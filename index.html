@@ -191,6 +191,39 @@
     .card:hover { filter: none; }
     .card h3 { color: var(--destaque); margin-bottom: 10px; }
 
+    .propostas-grupo { margin-bottom: 10px; }
+
+    .propostas-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 7px 18px;
+      border-radius: 30px;
+      margin-bottom: 16px;
+    }
+
+    .propostas-label--feitas {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border: 2px solid #a5d6a7;
+    }
+
+    .propostas-label--andamento {
+      background: #fff8e1;
+      color: #f57f17;
+      border: 2px solid #ffe082;
+    }
+
+    .card--feita { border-top: 4px solid #4caf50; }
+    .card--feita h3 { color: #2e7d32; }
+
+    .card--andamento { border-top: 4px solid #ffc107; }
+    .card--andamento h3 { color: #e65100; }
+
     /* EQUIPE */
     .membros {
       display: flex;
@@ -658,13 +691,27 @@
 <!-- PROPOSTAS -->
 <section id="propostas" class="section-content">
   <h2>Nossas Propostas</h2>
-  <div class="cards">
-    <div class="card"><h3>Festival Folclórico</h3><p>Focado nos 1° e 2°, participação facultativa dos 3°.</p></div>
-    <div class="card"><h3>Clubes diversos</h3><p>Teatro, música, e dança (funcionamento nos intervalos).</p></div>
-    <div class="card"><h3>Oficinas mensais</h3><p>Como a de educação financeira, seria de escolha dos estudantes.</p></div>
-    <div class="card"><h3>Caixinha de sugestões</h3><p>Incentivo da participação estudantil na melhoria do ambiente escolar.</p></div>
-    <div class="card"><h3>Meio ambiente local</h3><p>Atividades entre alunos ao ar livre, como hortas e jardinagem</p></div>
-    <div class="card"><h3>Petições para reformas</h3><p>Reformas de acesso à escola e outras melhorias.</p></div>
+
+  <div class="propostas-grupo">
+    <div class="propostas-label propostas-label--feitas">
+      <i class="fa-solid fa-circle-check"></i> Propostas Feitas
+    </div>
+    <div class="cards">
+      <div class="card card--feita"><h3>Clubes diversos</h3><p>Teatro, música, e dança (funcionamento nos intervalos).</p></div>
+      <div class="card card--feita"><h3>Caixinha de sugestões</h3><p>Incentivo da participação estudantil na melhoria do ambiente escolar.</p></div>
+      <div class="card card--feita"><h3>Petições para reformas</h3><p>Reformas de acesso à escola e outras melhorias.</p></div>
+    </div>
+  </div>
+
+  <div class="propostas-grupo">
+    <div class="propostas-label propostas-label--andamento">
+      <i class="fa-solid fa-spinner"></i> Propostas em Andamento
+    </div>
+    <div class="cards">
+      <div class="card card--andamento"><h3>Festival Folclórico</h3><p>Focado nos 1° e 2°, participação facultativa dos 3°.</p></div>
+      <div class="card card--andamento"><h3>Oficinas mensais</h3><p>Como a de educação financeira, seria de escolha dos estudantes.</p></div>
+      <div class="card card--andamento"><h3>Meio ambiente local</h3><p>Atividades entre alunos ao ar livre, como hortas e jardinagem.</p></div>
+    </div>
   </div>
 </section>
 
@@ -1024,6 +1071,7 @@
     <p class="artigo"><strong>Art. 59º</strong> As Ações do Grêmio deverão ser aprovadas pela gestão escolar.</p>
     <p class="artigo"><strong>Art. 60º</strong> Este Estatuto entrará em vigor após a sua aprovação em Assembleia Geral, configurando a entidade como Grêmio Estudantil autônomo, representante dos estudantes do referido Estabelecimento educacional, com finalidades preestabelecidas neste Estatuto, não podendo ser proibido ou cancelado por nenhum indivíduo, grupo ou autoridade, conforme a <span class="lei-destaque">Lei Federal 7398/85</span> e a <span class="lei-destaque">Lei Estadual 12.280/02 Art. 22º</span>.</p>
   </div>
+
 </section>
 
 <!-- SUGESTÕES -->
